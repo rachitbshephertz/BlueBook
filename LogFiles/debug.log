@@ -1,0 +1,1007 @@
+2018-10-30 10:48:00,302 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-10-30 10:48:47,822 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-10-30 11:01:16,915 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 13:05:13,460 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 13:16:23,966 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 13:30:59,059 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 13:33:27,930 - ErrorLogs - ERROR - EXCEPTION 403: Bad Dataset connection Params "Failed to establish connection with dataset connector: CSV"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 101, in train_model
+    % (json_data["dbconnect"]["name"]), 403)
+DatasetConnectionFailed: Failed to establish connection with dataset connector: CSV
+2018-11-01 13:33:27,943 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 13:33:27] "POST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1" 403 -
+2018-11-01 13:34:37,160 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 13:34:42,217 - ErrorLogs - ERROR - EXCEPTION 403: Bad Dataset connection Params "Failed to establish connection with dataset connector: CSV"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 101, in train_model
+    % (json_data["dbconnect"]["name"]), 403)
+DatasetConnectionFailed: Failed to establish connection with dataset connector: CSV
+2018-11-01 13:34:42,220 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 13:34:42] "POST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1" 403 -
+2018-11-01 13:36:22,714 - ErrorLogs - ERROR - EXCEPTION 403: Bad Dataset connection Params "Failed to establish connection with dataset connector: CSV Connect"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 101, in train_model
+    % (json_data["dbconnect"]["name"]), 403)
+DatasetConnectionFailed: Failed to establish connection with dataset connector: CSV Connect
+2018-11-01 13:36:22,716 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 13:36:22] "POST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1" 403 -
+2018-11-01 13:36:35,676 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 13:36:37,618 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: New model
+2018-11-01 13:36:37,625 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 13:36:37] "POST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1" 200 -
+2018-11-01 13:40:44,864 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 13:40:44] "POST /todo/api/v1.0/PredictionAnalytics/GetModel HTTP/1.1" 200 -
+2018-11-01 14:01:38,190 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:01:38,200 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:01:38] "POST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1" 200 -
+2018-11-01 14:01:50,832 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:01:50] "POST /todo/api/v1.0/PredictionAnalytics/GetModel HTTP/1.1" 200 -
+2018-11-01 14:02:47,553 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 242, in load_model
+    elif LMS.LoadModelService().check_if_model_load(json_data):
+  File "D:\rachit\Blue book\handler\LoadModelService.py", line 52, in check_if_model_load
+    + "_" + str(load_model_params["appId"]) + ".sav"
+KeyError: 'algorithm'
+2018-11-01 14:02:47,572 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:02:47] "POST /todo/api/v1.0/PredictionAnalytics/LoadModel HTTP/1.1" 500 -
+2018-11-01 14:04:05,973 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:04:05,986 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:04:05] "POST /todo/api/v1.0/PredictionAnalytics/LoadModel HTTP/1.1" 200 -
+2018-11-01 14:04:32,226 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:04:32] "POST /todo/api/v1.0/PredictionAnalytics/GetModel HTTP/1.1" 200 -
+2018-11-01 14:04:50,417 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:04:50] "POST /todo/api/v1.0/PredictionAnalytics/GetModel HTTP/1.1" 200 -
+2018-11-01 14:06:08,802 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model already loaded"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 243, in load_model
+    raise CE.ModelAlreadyInMemory("Model already loaded", 403)
+ModelAlreadyInMemory: Model already loaded
+2018-11-01 14:06:08,802 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:06:08] "POST /todo/api/v1.0/PredictionAnalytics/LoadModel HTTP/1.1" 403 -
+2018-11-01 14:19:11,246 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 323, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 35, in predict_service
+    if feature["columnName"] in model_collection_data["categoricalData"]:
+KeyError: 'categoricalData'
+2018-11-01 14:19:11,266 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:19:11] "POST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1" 500 -
+2018-11-01 14:22:29,009 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 14:24:14,368 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not loaded, Please load model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 321, in predict
+    raise CE.ModelNotInMemory("Model not loaded, Please load model", 403)
+ModelNotInMemory: Model not loaded, Please load model
+2018-11-01 14:24:14,369 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:24:14] "POST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1" 403 -
+2018-11-01 14:25:04,842 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:25:04,844 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:25:04] "POST /todo/api/v1.0/PredictionAnalytics/LoadModel HTTP/1.1" 200 -
+2018-11-01 14:26:13,407 - ErrorLogs - ERROR - EXCEPTION 403:Invalid Prediction Params "Model not trained for this feature:DiabetesPedigreeFunction to be categorical. Enter Int value"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 323, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 47, in predict_service
+    + " to be categorical. Enter Int value", 403)
+InvalidPredictionParams: Model not trained for this feature:DiabetesPedigreeFunction to be categorical. Enter Int value
+2018-11-01 14:26:13,408 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:26:13] "POST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1" 403 -
+2018-11-01 14:28:00,085 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 14:28:14,813 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:28:14,815 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:28:14] "POST /todo/api/v1.0/PredictionAnalytics/LoadModel HTTP/1.1" 200 -
+2018-11-01 14:28:19,658 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 323, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 65, in predict_service
+    if target in model_collection_data["categoricalData"]:
+KeyError: 'categoricalData'
+2018-11-01 14:28:19,663 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:28:19] "POST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1" 500 -
+2018-11-01 14:28:55,602 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 14:29:24,161 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:29:24,164 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:29:24] "POST /todo/api/v1.0/PredictionAnalytics/LoadModel HTTP/1.1" 200 -
+2018-11-01 14:29:27,246 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:29:27] "POST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1" 200 -
+2018-11-01 14:38:17,857 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:38:17] "POST /todo/api/v1.0/PredictionAnalytics/GetAllModel HTTP/1.1" 200 -
+2018-11-01 14:43:54,740 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:43:54] "POST /todo/api/v1.0/PredictionAnalytics/GetAllModel HTTP/1.1" 200 -
+2018-11-01 14:46:40,868 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 14:46:46,203 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:46:46] "POST /todo/api/v1.0/PredictionAnalytics/GetAllModel HTTP/1.1" 200 -
+2018-11-01 14:48:02,772 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 14:48:02,878 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 14:48:06,088 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:48:06] "POST /todo/api/v1.0/PredictionAnalytics/GetAllModel HTTP/1.1" 200 -
+2018-11-01 14:48:35,703 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:48:35] "POST /todo/api/v1.0/PredictionAnalytics/GetAllModel HTTP/1.1" 200 -
+2018-11-01 14:50:10,437 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:50:10] "POST /todo/api/v1.0/PredictionAnalytics/GetAllModel HTTP/1.1" 200 -
+2018-11-01 14:51:57,384 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 14:52:03,930 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:52:03,933 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:52:03] "POST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1" 200 -
+2018-11-01 14:52:08,522 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:52:08] "POST /todo/api/v1.0/PredictionAnalytics/GetModel HTTP/1.1" 200 -
+2018-11-01 14:52:24,395 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 14:52:24] "POST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1" 200 -
+2018-11-01 17:53:00,736 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-01 17:53:20,119 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network
+2018-11-01 17:53:20,136 - werkzeug - INFO - 127.0.0.1 - - [01/Nov/2018 17:53:20] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 10:19:10,932 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 10:19:10] "[37mPOST /todo/api/v1.0/PredictionAnalytics/GetAllModel HTTP/1.1[0m" 200 -
+2018-11-02 10:23:43,465 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 10:25:25,447 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\ModelService.py", line 95, in get_model_details
+    if model['deployed'] is not None:
+KeyError: 'deployed'
+2018-11-02 10:25:25,462 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\ModelService.py", line 95, in get_model_details
+    if model['deployed'] is not None:
+KeyError: 'deployed'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 176, in get_model
+    response_json["allModelValues"] = GMS.ModelService().get_model_details(json_data)
+  File "D:\rachit\Blue book\handler\ModelService.py", line 103, in get_model_details
+    raise Exception("Failed to get all model details: %s" % e.message, 500)
+AttributeError: 'KeyError' object has no attribute 'message'
+2018-11-02 10:25:25,463 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 10:25:25] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/GetModel HTTP/1.1[0m" 500 -
+2018-11-02 10:26:26,848 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 11:33:17,101 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 11:33:17] "[37mPOST /todo/api/v1.0/PredictionAnalytics/GetModel HTTP/1.1[0m" 200 -
+2018-11-02 11:44:32,507 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 11:44:32,508 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 11:44:32] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 11:55:19,650 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 11:57:58,098 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 11:57:58] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 11:58:43,630 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 11:58:43,963 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not loaded, Please load model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not loaded, Please load model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not loaded, Please load model
+2018-11-02 11:58:43,967 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 11:58:43] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 11:58:51,301 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not loaded, Please load model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not loaded, Please load model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not loaded, Please load model
+2018-11-02 11:58:51,303 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 11:58:51] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 11:59:15,189 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 11:59:15,305 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not loaded, Please load model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not loaded, Please load model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not loaded, Please load model
+2018-11-02 11:59:15,307 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 11:59:15] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 403 -
+2018-11-02 11:59:15,453 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:04:48,755 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:04:54,645 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:04:54,646 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:04:54] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:05:00,644 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:05:00] "[37mPOST /todo/api/v1.0/PredictionAnalytics/GetAllModel HTTP/1.1[0m" 200 -
+2018-11-02 12:06:12,502 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 66, in predict_service
+    prediction_list = loaded_model.predict_classes([feature_list])
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:06:12,561 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:06:12] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:08:06,750 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:08:07,034 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not deployed, Please deploy model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not deployed, Please deploy model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not deployed, Please deploy model
+2018-11-02 12:08:07,035 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:08:07] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 403 -
+2018-11-02 12:08:12,416 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:08:12,417 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:08:12] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:08:18,197 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 66, in predict_service
+    prediction_list = loaded_model.predict_classes(feature_list)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:08:18,201 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:08:18] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:09:30,194 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:09:30,843 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not deployed, Please deploy model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not deployed, Please deploy model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not deployed, Please deploy model
+2018-11-02 12:09:30,844 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:09:30] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 403 -
+2018-11-02 12:09:40,290 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:09:40,291 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:09:40] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:11:29,104 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:11:29,451 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:11:29,452 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:11:29] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:11:42,417 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 66, in predict_service
+    prediction_list = loaded_model.predict_classes(feature_list)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:11:42,423 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:11:42] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:12:27,659 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:12:36,400 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:12:36,401 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:12:36] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:12:40,135 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 67, in predict_service
+    prediction_list = loaded_model.predict_classes(feature_list)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:12:40,140 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:12:40] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:15:50,083 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:15:52,952 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:15:52,953 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:15:52] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:15:56,080 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 68, in predict_service
+    prediction_list = loaded_model.predict_classes(np.array(feature_list))
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:15:56,086 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:15:56] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:16:35,396 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:16:46,545 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:16:46,546 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:16:46] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:16:49,659 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model.predict_classes(feature_list)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:16:49,664 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:16:49] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:22:26,423 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:22:26,562 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:22:27,720 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:22:27,721 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:22:27] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:22:31,495 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model.predict_classes(feature_list)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:22:31,501 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:22:31] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:22:36,739 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model.predict_classes(feature_list)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:22:36,741 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:22:36] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:22:41,843 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model already deployed"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 242, in load_model
+    raise CE.ModelAlreadyInMemory("Model already deployed", 403)
+CustomException.CustomException.ModelAlreadyInMemory: Model already deployed
+2018-11-02 12:22:41,844 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:22:41] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 403 -
+2018-11-02 12:23:05,313 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:23:11,215 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:23:11,216 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:23:11] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:23:17,281 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model.predict_classes(feature_list)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:23:17,286 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:23:17] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:26:17,199 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:26:19,009 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:26:19,010 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:26:19] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:26:23,199 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model.predict_classes(feature_list)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1164, in predict
+    self._make_predict_function()
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 554, in _make_predict_function
+    **kwargs)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\backend\tensorflow_backend.py", line 2744, in function
+    return Function(inputs, outputs, updates=updates, **kwargs)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\backend\tensorflow_backend.py", line 2546, in __init__
+    with tf.control_dependencies(self.outputs):
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 5002, in control_dependencies
+    return get_default_graph().control_dependencies(control_inputs)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 4541, in control_dependencies
+    c = self.as_graph_element(c)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3488, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3567, in _as_graph_element_locked
+    raise ValueError("Tensor %s is not an element of this graph." % obj)
+ValueError: Tensor Tensor("dense_3/Sigmoid:0", shape=(?, 1), dtype=float32) is not an element of this graph.
+2018-11-02 12:26:23,203 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:26:23] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:28:02,878 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:28:03,053 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:28:16,806 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:28:16,807 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:28:16] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:28:33,474 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:28:36,002 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:28:36,003 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:28:36] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:28:38,348 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model.predict_classes(feature_list)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1164, in predict
+    self._make_predict_function()
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 554, in _make_predict_function
+    **kwargs)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\backend\tensorflow_backend.py", line 2744, in function
+    return Function(inputs, outputs, updates=updates, **kwargs)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\backend\tensorflow_backend.py", line 2546, in __init__
+    with tf.control_dependencies(self.outputs):
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 5002, in control_dependencies
+    return get_default_graph().control_dependencies(control_inputs)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 4541, in control_dependencies
+    c = self.as_graph_element(c)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3488, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3567, in _as_graph_element_locked
+    raise ValueError("Tensor %s is not an element of this graph." % obj)
+ValueError: Tensor Tensor("dense_3/Sigmoid:0", shape=(?, 1), dtype=float32) is not an element of this graph.
+2018-11-02 12:28:38,353 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:28:38] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:30:12,576 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:30:21,962 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:30:21,963 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:30:21] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:30:27,307 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model.predict_classes([1.,103.,30.,0.183 ,43.1,33.,38., 83.])
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:30:27,311 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:30:27] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:31:29,178 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:31:46,270 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:31:46,271 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:31:46] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:31:49,529 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model.predict_classes([[1.,103.,30.,0.183 ,43.1,33.,38., 83.]])
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1149, in predict
+    x, _, _ = self._standardize_user_data(x)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training_utils.py", line 138, in standardize_input_data
+    str(data_shape))
+ValueError: Error when checking input: expected dense_1_input to have shape (8,) but got array with shape (1,)
+2018-11-02 12:31:49,535 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:31:49] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:32:38,423 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:32:44,183 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:32:44,184 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:32:44] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:32:48,529 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model.predict_classes(np.array([[1.,103.,30.,0.183 ,43.1,33.,38., 83.]]))
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\sequential.py", line 267, in predict_classes
+    proba = self.predict(x, batch_size=batch_size, verbose=verbose)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 1164, in predict
+    self._make_predict_function()
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\training.py", line 554, in _make_predict_function
+    **kwargs)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\backend\tensorflow_backend.py", line 2744, in function
+    return Function(inputs, outputs, updates=updates, **kwargs)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\backend\tensorflow_backend.py", line 2546, in __init__
+    with tf.control_dependencies(self.outputs):
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 5002, in control_dependencies
+    return get_default_graph().control_dependencies(control_inputs)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 4541, in control_dependencies
+    c = self.as_graph_element(c)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3488, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3567, in _as_graph_element_locked
+    raise ValueError("Tensor %s is not an element of this graph." % obj)
+ValueError: Tensor Tensor("dense_3/Sigmoid:0", shape=(?, 1), dtype=float32) is not an element of this graph.
+2018-11-02 12:32:48,534 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:32:48] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:34:36,148 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:34:39,768 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:34:39,769 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:34:39] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:34:43,022 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model._make_predict_function(np.array([[1.,103.,30.,0.183 ,43.1,33.,38., 83.]]))
+TypeError: _make_predict_function() takes 1 positional argument but 2 were given
+2018-11-02 12:34:43,024 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:34:43] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:36:03,379 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:36:10,713 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:36:10,715 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:36:10] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:36:14,374 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    prediction_list = loaded_model._make_predict_function(feature_list)
+TypeError: _make_predict_function() takes 1 positional argument but 2 were given
+2018-11-02 12:36:14,376 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:36:14] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:44:41,485 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:44:49,823 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:44:49,827 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:44:49] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:45:02,900 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 68, in predict_service
+    with graph.as_default():
+NameError: name 'graph' is not defined
+2018-11-02 12:45:02,901 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:45:02] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:46:39,333 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:46:46,644 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not deployed, Please deploy model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not deployed, Please deploy model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not deployed, Please deploy model
+2018-11-02 12:46:46,645 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:46:46] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 403 -
+2018-11-02 12:46:50,914 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:46:50,917 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:46:50] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:46:54,973 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 68, in predict_service
+    with graph.as_default():
+NameError: name 'graph' is not defined
+2018-11-02 12:46:54,974 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:46:54] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:48:18,884 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:48:30,797 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:48:30,798 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:48:30] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:48:33,162 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 68, in predict_service
+    with LMS.LoadModelService().graph.as_default():
+AttributeError: 'LoadModelService' object has no attribute 'graph'
+2018-11-02 12:48:33,163 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:48:33] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:51:15,385 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:51:16,352 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:51:16,353 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:51:16] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:51:20,359 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 68, in predict_service
+    with LMS.LoadModelService().graph.as_default():
+AttributeError: 'LoadModelService' object has no attribute 'graph'
+2018-11-02 12:51:20,361 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:51:20] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:52:12,437 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:52:45,885 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not deployed, Please deploy model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not deployed, Please deploy model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not deployed, Please deploy model
+2018-11-02 12:52:45,886 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:52:45] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 403 -
+2018-11-02 12:52:49,982 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:52:49,983 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:52:49] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:52:52,172 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 68, in predict_service
+    with LMS.LoadModelService().graph.as_default():
+AttributeError: 'LoadModelService' object has no attribute 'graph'
+2018-11-02 12:52:52,174 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:52:52] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 12:54:13,123 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:54:24,174 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:54:24,175 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:54:24] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:54:52,292 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 12:54:56,973 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:54:56,975 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:54:56] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 12:54:59,560 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 69, in predict_service
+    with graph.as_default():
+NameError: name 'graph' is not defined
+2018-11-02 12:54:59,562 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 12:54:59] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 13:09:02,900 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 13:09:14,129 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 13:09:14,130 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:09:14] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 13:09:17,904 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:09:17] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:09:45,134 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 13:09:57,795 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 13:09:57,796 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:09:57] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 13:10:01,065 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:10:01] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:11:52,640 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 13:11:52,773 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 13:16:28,601 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 13:16:30,485 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not deployed, Please deploy model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not deployed, Please deploy model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not deployed, Please deploy model
+2018-11-02 13:16:30,486 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:16:30] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 403 -
+2018-11-02 13:16:35,131 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 13:16:35,132 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:16:35] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 13:16:39,179 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:16:39] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:08,848 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:08] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:10,252 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:10] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:11,318 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:11] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:12,957 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:12] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:15,442 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:15] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:16,747 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:16] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:20,283 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:20] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:21,540 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:21] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:23,946 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:23] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:25,896 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:25] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:27,091 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:27] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:28,220 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:28] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:29,289 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:29] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:30,138 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:30] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:31,533 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:31] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:17:32,687 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:17:32] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 13:26:19,056 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 13:26:24,869 - ErrorLogs - ERROR - EXCEPTION 403: Bad Algorithm Params "Model name already exist for this app id"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 97, in train_model
+    raise CE.BadAlgorithmParams("Model name already exist for this app id", 403)
+CustomException.CustomException.BadAlgorithmParams: Model name already exist for this app id
+2018-11-02 13:26:24,870 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:26:24] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 403 -
+2018-11-02 13:26:41,441 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 13:26:41,441 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:26:41] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 13:26:45,023 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 322, in predict
+    response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+  File "D:\rachit\Blue book\handler\PredictService.py", line 36, in predict_service
+    if 'categoricalData' in model_collection_data or feature["columnName"] in model_collection_data["categoricalData"]:
+KeyError: 'categoricalData'
+2018-11-02 13:26:45,025 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:26:45] "[1m[35mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 500 -
+2018-11-02 13:36:59,468 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 13:37:11,850 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 13:37:11,851 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:37:11] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 13:37:15,287 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 13:37:15] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -
+2018-11-02 14:01:49,693 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 14:02:03,192 - ErrorLogs - ERROR - EXCEPTION 403: Bad Algorithm Params "Model name already exist for this app id"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 97, in train_model
+    raise CE.BadAlgorithmParams("Model name already exist for this app id", 403)
+CustomException.CustomException.BadAlgorithmParams: Model name already exist for this app id
+2018-11-02 14:02:03,193 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:02:03] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 403 -
+2018-11-02 14:02:15,252 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 1
+2018-11-02 14:02:15,253 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:02:15] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 14:04:25,778 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 14:04:32,018 - ErrorLogs - ERROR - EXCEPTION 403: Bad Algorithm Params "Model name already exist for this app id"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 97, in train_model
+    raise CE.BadAlgorithmParams("Model name already exist for this app id", 403)
+CustomException.CustomException.BadAlgorithmParams: Model name already exist for this app id
+2018-11-02 14:04:32,027 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:04:32] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 403 -
+2018-11-02 14:05:18,294 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 14:05:19,751 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 3
+2018-11-02 14:05:19,751 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:05:19] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 14:10:16,908 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 14:10:18,645 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 4
+2018-11-02 14:10:18,646 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:10:18] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 14:11:20,253 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 14:11:26,540 - ErrorLogs - ERROR - EXCEPTION 403: Bad Algorithm Params "Model name already exist for this app id"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 97, in train_model
+    raise CE.BadAlgorithmParams("Model name already exist for this app id", 403)
+CustomException.CustomException.BadAlgorithmParams: Model name already exist for this app id
+2018-11-02 14:11:26,542 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:11:26] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 403 -
+2018-11-02 14:11:33,273 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 5
+2018-11-02 14:11:33,274 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:11:33] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 14:13:14,671 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 14:13:25,372 - ErrorLogs - ERROR - EXCEPTION 403: Bad Algorithm Params "Model name already exist for this app id"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 97, in train_model
+    raise CE.BadAlgorithmParams("Model name already exist for this app id", 403)
+CustomException.CustomException.BadAlgorithmParams: Model name already exist for this app id
+2018-11-02 14:13:25,373 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:13:25] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 403 -
+2018-11-02 14:13:35,609 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 6
+2018-11-02 14:13:35,612 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:13:35] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 14:57:51,752 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 14:57:59,602 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 7
+2018-11-02 14:57:59,603 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:57:59] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 14:57:59,672 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "('activationInputLayer',)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 28, in train
+    trained_model.add(Dense(12, input_dim=len(split_params["features_train"].columns), activation=model_dict["algorithm"]["parameters"]["activationInputLayer"]))
+KeyError: 'activationInputLayer'
+2018-11-02 14:58:42,430 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 14:59:40,815 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 14:59:44,513 - ErrorLogs - ERROR - EXCEPTION 403: Bad Algorithm Params "Model name already exist for this app id"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 97, in train_model
+    raise CE.BadAlgorithmParams("Model name already exist for this app id", 403)
+CustomException.CustomException.BadAlgorithmParams: Model name already exist for this app id
+2018-11-02 14:59:44,514 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:59:44] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 403 -
+2018-11-02 14:59:51,915 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 8
+2018-11-02 14:59:51,917 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 14:59:51] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 14:59:52,009 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "('activationInputLayer',)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 29, in train
+    trained_model.add(Dense(12, input_dim=len(split_params["features_train"].columns), activation=model_dict["algorithm"]["parameters"]["activationInputLayer"]))
+KeyError: 'activationInputLayer'
+2018-11-02 15:02:34,474 - ErrorLogs - ERROR - EXCEPTION 403: Bad Algorithm Params "Model name already exist for this app id"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 97, in train_model
+    raise CE.BadAlgorithmParams("Model name already exist for this app id", 403)
+CustomException.CustomException.BadAlgorithmParams: Model name already exist for this app id
+2018-11-02 15:02:34,476 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:02:34] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 403 -
+2018-11-02 15:02:41,836 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 9
+2018-11-02 15:02:41,837 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:02:41] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:02:41,897 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "('string indices must be integers',)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 31, in train
+    for hiddenLayer in model_dict["algorithm"]["parameters"]["activationOutputLayer"]["hiddenLayers"]:
+TypeError: string indices must be integers
+2018-11-02 15:04:37,850 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:04:47,940 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 10
+2018-11-02 15:04:47,941 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:04:47] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:04:48,028 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "('string indices must be integers',)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 31, in train
+    for hiddenLayer in model_dict["algorithm"]["parameters"]["activationOutputLayer"]["hiddenLayers"]:
+TypeError: string indices must be integers
+2018-11-02 15:05:37,757 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:05:49,514 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 11
+2018-11-02 15:05:49,515 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:05:49] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:05:49,605 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "("malformed node or string: {'type': 'dense', 'neurons': 8, 'activation': 'relu'}",)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 32, in train
+    hiddenLayer = ast.literal_eval(hiddenLayer)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\ast.py", line 85, in literal_eval
+    return _convert(node_or_string)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\ast.py", line 84, in _convert
+    raise ValueError('malformed node or string: ' + repr(node))
+ValueError: malformed node or string: {'type': 'dense', 'neurons': 8, 'activation': 'relu'}
+2018-11-02 15:06:32,547 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:06:35,931 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 12
+2018-11-02 15:06:35,932 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:06:35] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:06:36,013 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "("'str' object is not callable",)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 32, in train
+    trained_model.add(hiddenLayer["type"](hiddenLayer["neurons"], activation=hiddenLayer["activation"]))
+TypeError: 'str' object is not callable
+2018-11-02 15:07:27,369 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:07:30,805 - ErrorLogs - ERROR - EXCEPTION 403: Bad Algorithm Params "Model name already exist for this app id"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 97, in train_model
+    raise CE.BadAlgorithmParams("Model name already exist for this app id", 403)
+CustomException.CustomException.BadAlgorithmParams: Model name already exist for this app id
+2018-11-02 15:07:30,806 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:07:30] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 403 -
+2018-11-02 15:07:40,211 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 13
+2018-11-02 15:07:40,213 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:07:40] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:07:40,289 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "("malformed node or string: {'type': 'dense', 'neurons': 8, 'activation': 'relu'}",)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 33, in train
+    hiddenLayer = ast.literal_eval(hiddenLayer)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\ast.py", line 85, in literal_eval
+    return _convert(node_or_string)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\ast.py", line 84, in _convert
+    raise ValueError('malformed node or string: ' + repr(node))
+ValueError: malformed node or string: {'type': 'dense', 'neurons': 8, 'activation': 'relu'}
+2018-11-02 15:11:20,868 - ErrorLogs - ERROR - EXCEPTION 403: Bad Algorithm Params "Model name already exist for this app id"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 97, in train_model
+    raise CE.BadAlgorithmParams("Model name already exist for this app id", 403)
+CustomException.CustomException.BadAlgorithmParams: Model name already exist for this app id
+2018-11-02 15:11:20,869 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:11:20] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 403 -
+2018-11-02 15:11:27,403 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 14
+2018-11-02 15:11:27,404 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:11:27] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:11:27,459 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "("malformed node or string: {'type': 'dense', 'neurons': '8', 'activation': 'relu'}",)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 33, in train
+    hiddenLayer = ast.literal_eval(hiddenLayer)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\ast.py", line 85, in literal_eval
+    return _convert(node_or_string)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\ast.py", line 84, in _convert
+    raise ValueError('malformed node or string: ' + repr(node))
+ValueError: malformed node or string: {'type': 'dense', 'neurons': '8', 'activation': 'relu'}
+2018-11-02 15:13:31,723 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:13:37,055 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 15
+2018-11-02 15:13:37,056 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:13:37] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:13:37,147 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "("the JSON object must be str, bytes or bytearray, not 'dict'",)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 33, in train
+    hiddenLayer = json.loads(hiddenLayer)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 348, in loads
+    'not {!r}'.format(s.__class__.__name__))
+TypeError: the JSON object must be str, bytes or bytearray, not 'dict'
+2018-11-02 15:14:31,874 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:14:46,602 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 16
+2018-11-02 15:14:46,603 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:14:46] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:14:46,696 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)',)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 32, in train
+    hiddenLayer = json.loads(str(hiddenLayer))
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2018-11-02 15:16:13,779 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 17
+2018-11-02 15:16:13,780 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:16:13] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:16:13,825 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)',)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 32, in train
+    hiddenLayer = json.loads(str(hiddenLayer))
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2018-11-02 15:16:37,122 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:16:43,127 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 18
+2018-11-02 15:16:43,128 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:16:43] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:16:43,251 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "("malformed node or string: {'type': 'dense', 'neurons': '8', 'activation': 'relu'}",)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 33, in train
+    hiddenLayer = ast.literal_eval(hiddenLayer)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\ast.py", line 85, in literal_eval
+    return _convert(node_or_string)
+  File "C:\Users\rachit.bedi\AppData\Local\Programs\Python\Python36\lib\ast.py", line 84, in _convert
+    raise ValueError('malformed node or string: ' + repr(node))
+ValueError: malformed node or string: {'type': 'dense', 'neurons': '8', 'activation': 'relu'}
+2018-11-02 15:18:34,013 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 19
+2018-11-02 15:18:34,014 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:18:34] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:18:34,070 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "("'str' object is not callable",)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 34, in train
+    trained_model.add(hiddenLayer["type"](hiddenLayer["neurons"], activation=hiddenLayer["activation"]))
+TypeError: 'str' object is not callable
+2018-11-02 15:20:24,403 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 20
+2018-11-02 15:20:24,404 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:20:24] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:20:24,468 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "("'str' object is not callable",)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 34, in train
+    trained_model.add(hiddenLayer["type"](hiddenLayer["neurons"], activation=hiddenLayer["activation"]))
+TypeError: 'str' object is not callable
+2018-11-02 15:22:20,200 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:22:29,152 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 21
+2018-11-02 15:22:29,153 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:22:29] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:22:29,243 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "("'str' object is not callable",)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 35, in train
+    trained_model.add(hiddenLayer["type"](hiddenLayer["neurons"], activation=hiddenLayer["activation"]))
+TypeError: 'str' object is not callable
+2018-11-02 15:23:32,835 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:23:37,088 - ErrorLogs - ERROR - EXCEPTION 403: Bad Algorithm Params "Model name already exist for this app id"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 97, in train_model
+    raise CE.BadAlgorithmParams("Model name already exist for this app id", 403)
+CustomException.CustomException.BadAlgorithmParams: Model name already exist for this app id
+2018-11-02 15:23:37,090 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:23:37] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 403 -
+2018-11-02 15:23:44,632 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 22
+2018-11-02 15:23:44,635 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:23:44] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:23:44,713 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up "("'str' object is not callable",)"
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\TrainService.py", line 49, in train_model
+    model_dict = AF.AlgorithmFactory().algorithm(selected_algorithm).train(split_params, model_dict)
+  File "D:\rachit\Blue book\Algorithms\NeuralNetwork.py", line 35, in train
+    trained_model.add(hiddenLayer["type"](hiddenLayer["neurons"], activation=hiddenLayer["activation"]))
+TypeError: 'str' object is not callable
+2018-11-02 15:26:16,457 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:27:31,125 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 23
+2018-11-02 15:27:31,126 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:27:31] "[37mPOST /todo/api/v1.0/PredictionAnalytics/TrainModel HTTP/1.1[0m" 200 -
+2018-11-02 15:28:25,786 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not deployed, Please deploy model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not deployed, Please deploy model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not deployed, Please deploy model
+2018-11-02 15:28:25,788 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:28:25] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 403 -
+2018-11-02 15:28:38,657 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network 23
+2018-11-02 15:28:38,658 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:28:38] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 15:28:38,710 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\client\session.py", line 1050, in _run
+    subfeed, allow_tensor=True, allow_operation=False)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3488, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3567, in _as_graph_element_locked
+    raise ValueError("Tensor %s is not an element of this graph." % obj)
+ValueError: Tensor Tensor("Placeholder:0", shape=(8, 12), dtype=float32) is not an element of this graph.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\LoadModelService.py", line 31, in load_model
+    LoadModelService.load_model_dict[filename] = pickle.load(open(filepath, 'rb'))
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\network.py", line 1266, in __setstate__
+    model = saving.unpickle_model(state)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\saving.py", line 435, in unpickle_model
+    return _deserialize_model(f)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\saving.py", line 287, in _deserialize_model
+    K.batch_set_value(weight_value_tuples)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\backend\tensorflow_backend.py", line 2470, in batch_set_value
+    get_session().run(assign_ops, feed_dict=feed_dict)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\client\session.py", line 887, in run
+    run_metadata_ptr)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\client\session.py", line 1053, in _run
+    'Cannot interpret feed_dict key as Tensor: ' + e.args[0])
+TypeError: Cannot interpret feed_dict key as Tensor: Tensor Tensor("Placeholder:0", shape=(8, 12), dtype=float32) is not an element of this graph.
+2018-11-02 15:28:48,004 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not deployed, Please deploy model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not deployed, Please deploy model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not deployed, Please deploy model
+2018-11-02 15:28:48,005 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:28:48] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 403 -
+2018-11-02 15:28:57,212 - ErrorLogs - ERROR - EXCEPTION 403: NO such model "Model not deployed, Please deploy model"
+Traceback (most recent call last):
+  File "D:/rachit/Blue book/PC.py", line 320, in predict
+    raise CE.ModelNotInMemory("Model not deployed, Please deploy model", 403)
+CustomException.CustomException.ModelNotInMemory: Model not deployed, Please deploy model
+2018-11-02 15:28:57,213 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:28:57] "[1m[31mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 403 -
+2018-11-02 15:29:04,802 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network 23
+2018-11-02 15:29:04,803 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:29:04] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 15:29:04,862 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\client\session.py", line 1050, in _run
+    subfeed, allow_tensor=True, allow_operation=False)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3488, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3567, in _as_graph_element_locked
+    raise ValueError("Tensor %s is not an element of this graph." % obj)
+ValueError: Tensor Tensor("Placeholder:0", shape=(8, 12), dtype=float32) is not an element of this graph.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\LoadModelService.py", line 31, in load_model
+    LoadModelService.load_model_dict[filename] = pickle.load(open(filepath, 'rb'))
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\network.py", line 1266, in __setstate__
+    model = saving.unpickle_model(state)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\saving.py", line 435, in unpickle_model
+    return _deserialize_model(f)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\saving.py", line 287, in _deserialize_model
+    K.batch_set_value(weight_value_tuples)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\backend\tensorflow_backend.py", line 2470, in batch_set_value
+    get_session().run(assign_ops, feed_dict=feed_dict)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\client\session.py", line 887, in run
+    run_metadata_ptr)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\client\session.py", line 1053, in _run
+    'Cannot interpret feed_dict key as Tensor: ' + e.args[0])
+TypeError: Cannot interpret feed_dict key as Tensor: Tensor Tensor("Placeholder:0", shape=(8, 12), dtype=float32) is not an element of this graph.
+2018-11-02 15:29:34,383 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network 23
+2018-11-02 15:29:34,384 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:29:34] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 15:29:34,437 - ErrorLogs - ERROR - EXCEPTION 500: Damm! Something Blew up
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\client\session.py", line 1050, in _run
+    subfeed, allow_tensor=True, allow_operation=False)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3488, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\framework\ops.py", line 3567, in _as_graph_element_locked
+    raise ValueError("Tensor %s is not an element of this graph." % obj)
+ValueError: Tensor Tensor("Placeholder:0", shape=(8, 12), dtype=float32) is not an element of this graph.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\rachit\Blue book\handler\LoadModelService.py", line 31, in load_model
+    LoadModelService.load_model_dict[filename] = pickle.load(open(filepath, 'rb'))
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\network.py", line 1266, in __setstate__
+    model = saving.unpickle_model(state)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\saving.py", line 435, in unpickle_model
+    return _deserialize_model(f)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\engine\saving.py", line 287, in _deserialize_model
+    K.batch_set_value(weight_value_tuples)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\keras\backend\tensorflow_backend.py", line 2470, in batch_set_value
+    get_session().run(assign_ops, feed_dict=feed_dict)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\client\session.py", line 887, in run
+    run_metadata_ptr)
+  File "D:\rachit\Blue book\Blue3\lib\site-packages\tensorflow\python\client\session.py", line 1053, in _run
+    'Cannot interpret feed_dict key as Tensor: ' + e.args[0])
+TypeError: Cannot interpret feed_dict key as Tensor: Tensor Tensor("Placeholder:0", shape=(8, 12), dtype=float32) is not an element of this graph.
+2018-11-02 15:30:45,680 - werkzeug - INFO -  * Running on http://0.0.0.0:6060/ (Press CTRL+C to quit)
+2018-11-02 15:30:51,015 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network 23
+2018-11-02 15:30:51,018 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:30:51] "[37mPOST /todo/api/v1.0/PredictionAnalytics/DeployModel HTTP/1.1[0m" 200 -
+2018-11-02 15:31:09,364 - werkzeug - INFO - 127.0.0.1 - - [02/Nov/2018 15:31:09] "[37mPOST /todo/api/v1.0/PredictionAnalytics/Predict HTTP/1.1[0m" 200 -

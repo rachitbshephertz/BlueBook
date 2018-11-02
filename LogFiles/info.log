@@ -1,0 +1,64 @@
+2018-11-01 13:36:37,618 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: New model
+2018-11-01 14:01:38,190 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:04:05,973 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:25:04,842 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:28:14,813 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:29:24,161 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: New model 1
+2018-11-01 14:52:03,930 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: New model 1
+2018-11-01 17:53:20,119 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network
+2018-11-02 11:44:32,507 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:04:54,645 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:08:12,416 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:09:40,290 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:11:29,451 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:12:36,400 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:15:52,952 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:16:46,545 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:22:27,720 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:23:11,215 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:26:19,009 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:28:16,806 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:28:36,002 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:30:21,962 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:31:46,270 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:32:44,183 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:34:39,768 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:36:10,713 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:44:49,823 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:46:50,914 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:48:30,797 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:51:16,352 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:52:49,982 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:54:24,174 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 12:54:56,973 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 13:09:14,129 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 13:09:57,795 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 13:16:35,131 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 13:26:41,441 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 13:37:11,850 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network
+2018-11-02 14:02:15,252 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 1
+2018-11-02 14:05:19,751 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 3
+2018-11-02 14:10:18,645 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 4
+2018-11-02 14:11:33,273 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 5
+2018-11-02 14:13:35,609 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 6
+2018-11-02 14:57:59,602 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 7
+2018-11-02 14:59:51,915 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 8
+2018-11-02 15:02:41,836 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 9
+2018-11-02 15:04:47,940 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 10
+2018-11-02 15:05:49,514 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 11
+2018-11-02 15:06:35,931 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 12
+2018-11-02 15:07:40,211 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 13
+2018-11-02 15:11:27,403 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 14
+2018-11-02 15:13:37,055 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 15
+2018-11-02 15:14:46,602 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 16
+2018-11-02 15:16:13,779 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 17
+2018-11-02 15:16:43,127 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 18
+2018-11-02 15:18:34,013 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 19
+2018-11-02 15:20:24,403 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 20
+2018-11-02 15:22:29,152 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 21
+2018-11-02 15:23:44,632 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 22
+2018-11-02 15:27:31,125 - InfoLogs - INFO - Step1: New thread started to do model training for Appid: 123456 and Modelname: Neural Network 23
+2018-11-02 15:28:38,657 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network 23
+2018-11-02 15:29:04,802 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network 23
+2018-11-02 15:29:34,383 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network 23
+2018-11-02 15:30:51,015 - InfoLogs - INFO - New thread started to load model for Appid: 123456 and Modelname: Neural Network 23
