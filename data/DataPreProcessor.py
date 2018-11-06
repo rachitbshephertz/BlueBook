@@ -1,9 +1,10 @@
-
-import ast
+import pickle
+import ast, os
 import numpy as np
 import logging.config
 from logs import LogHandler
-
+from sklearn import preprocessing
+from config import ConfigManager
 
 ErrorLogger = logging.getLogger("ErrorLogs")
 DebugLogger = logging.getLogger("DebugLogs")
@@ -26,6 +27,7 @@ class DataPreProcessor(object):
             target_list = self.get_target_list(model_dict)
             model_dict["targetList"] = target_list
             print (dataset.head())
+
             # replace ? with NAN for handling later
             dataset = dataset.replace('?', np.NaN)
             dataset = dataset.replace(' ?', np.NaN)
@@ -38,12 +40,32 @@ class DataPreProcessor(object):
 
             # Handle Categorical(string) data by converting to int
             model_dict, dataset = self.handle_catagorical_data(model_dict, dataset)
+
+            # Scale feature list data
+            dataset = self.scale_data(dataset,feature_list,model_dict)
+
             return model_dict, dataset, feature_list, target_list
 
         except Exception as e:
-            ErrorLogger.exception('EXCEPTION %s: Damm! Something Blew up "%s"', 500, e.message)
+            ErrorLogger.exception('EXCEPTION %s: Damm! Something Blew up "%s"', 500, str(e))
             raise Exception("Failed to preProcess data: %s"
-                                             % e.message, 500)
+                                             % str(e), 500)
+
+    def scale_data(self, dataset, feature_list, model_dict):
+        min_max_scaler = preprocessing.MinMaxScaler()
+        dataset[feature_list] = min_max_scaler.fit_transform(dataset[feature_list])
+
+        # save the minmax scaler to disk
+        Directory = ConfigManager.ROOT_DIR + "/TrainedModelsDirectory"
+        filename = str(model_dict["modelName"]) + "_" + "minmaxScaler_" \
+                   + str(model_dict["appId"]) + ".sav"
+        filepath = os.path.join(Directory, filename)
+
+        files = open(filepath, 'wb')
+        pickle.dump(min_max_scaler, files, protocol=pickle.HIGHEST_PROTOCOL)
+        files.close()
+
+        return dataset
 
     def handle_catagorical_data(self, model_dict, dataset):
         categorical_data = {}

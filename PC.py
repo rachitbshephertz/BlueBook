@@ -364,5 +364,5 @@ def not_found(error):
 
 
 if __name__ == "__main__":
-    app.run(debug=False,host='0.0.0.0',port=int("6060"), threaded=True)
+    app.run(debug=False,host='0.0.0.0',port=int("6060"), threaded=False)
 

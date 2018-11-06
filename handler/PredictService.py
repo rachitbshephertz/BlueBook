@@ -5,6 +5,10 @@ import logging.config
 from CustomException import CustomException as CE
 from logs import LogHandler
 import numpy as np
+from sklearn import preprocessing
+import pickle
+from config import ConfigManager
+import os
 
 ErrorLogger = logging.getLogger("ErrorLogs")
 DebugLogger = logging.getLogger("DebugLogs")
@@ -61,9 +65,23 @@ class PredictService(object):
         for feature in model_collection_data["featureList"]:
             feature_list.append(feature_dict[str(feature)])
 
+        # scale data
+
+        Directory = ConfigManager.ROOT_DIR + "/TrainedModelsDirectory"
+        filename = str(model_params["modelName"]) + "_" + "minmaxScaler_" \
+                       + str(model_params["appId"]) + ".sav"
+        filepath = os.path.join(Directory, filename)
+
+        min_max_scaler = pickle.load(open(filepath, 'rb'))
+        feature_list = min_max_scaler.transform([feature_list])[0]
+
         # model file name
-        filename = str(model_params["modelName"]) + "_" + str(model_params["algorithm"]["name"])\
-                                                  + "_" + str(model_params["appId"]) + ".sav"
+        if "Neural Network" in model_params["algorithm"]["name"]:
+            filename = str(model_params["modelName"]) + "_" + str(model_params["algorithm"]["name"]) \
+                       + "_" + str(model_params["appId"]) + ".hdf5"
+        else:
+            filename = str(model_params["modelName"]) + "_" + str(model_params["algorithm"]["name"]) \
+                       + "_" + str(model_params["appId"]) + ".sav"
 
         # load the model from memory
         loaded_model = LMS.LoadModelService().load_model_dict[filename]
@@ -92,8 +110,7 @@ class PredictService(object):
                     prediction_dict[str(target)] = prediction_list[target_counter]
                     target_counter = target_counter + 1
             else:
-                prediction_dict[str(target)] = prediction_list[target_counter]
-                target_counter = target_counter + 1
+                    prediction_dict[str(target)] = prediction_list[target_counter]
+                    target_counter = target_counter + 1
 
         return prediction_dict
-

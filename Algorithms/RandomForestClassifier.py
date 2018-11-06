@@ -11,7 +11,7 @@ class RandomForestClassifier(object):
     def __init__(self):
         pass
 
-    def train(self, split_params, model_dict):
+    def train(self, split_params,   model_dict):
         algo_parameters_dict = ConfigManager.random_forest_classifier_list
         Directory = ConfigManager.ROOT_DIR + "/TrainedModelsDirectory"
         filename = str(model_dict["modelName"]) + "_" + str(model_dict["algorithm"]["name"]) + "_" \
@@ -51,8 +51,8 @@ class RandomForestClassifier(object):
         files.close()
         predict = trained_model.predict(split_params["features_test"])
         accuracy = accuracy_score(split_params["target_test"], predict)
-        model_dict["accuracy"] = accuracy
-        model_dict["actual"] = list(split_params["target_test"])
-        model_dict["predicted"] = list(map(int, predict))
+        model_dict["accuracy"] = round(accuracy*100, 2)
+        # model_dict["actual"] = list(split_params["target_test"])
+        # model_dict["predicted"] = list(map(int, predict))
         return model_dict
 
