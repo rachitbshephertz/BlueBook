@@ -103,7 +103,8 @@ class PredictService(object):
             if 'categoricalData' in model_collection_data:
                 if target in model_collection_data["categoricalData"]:
                     cat_dict = dict(model_collection_data["categoricalData"][target]["encoding"])
-                    cat_decoded_value = cat_dict.keys()[cat_dict.values().index(prediction_list[target_counter])]
+
+                    cat_decoded_value = list(cat_dict.keys())[list(cat_dict.values()).index(prediction_list[target_counter])]
                     prediction_dict[str(target)] = str(cat_decoded_value)
                     target_counter = target_counter + 1
                 else:

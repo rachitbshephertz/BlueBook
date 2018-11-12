@@ -2,12 +2,12 @@ from Algorithms import NaiveBayesGaussian as NB, NeuralNetwork as NW, LogisticsR
     RandomForestClassifier as RF, NeuralNetwork as NN
 from config import ConfigManager
 
+
 class AlgorithmFactory(object):
 
     def __init__(self):
       pass
 
- 
     def algorithm(self,algorithmSelect):
         if ConfigManager.algo_list.get(algorithmSelect) == 'LR':
             algoModelInstance = LR.LogisticsRegression()
@@ -22,3 +22,4 @@ class AlgorithmFactory(object):
         elif ConfigManager.algo_list.get(algorithmSelect) == 'CNN':
             algoModelInstance = NN.NeuralNetwork()
         return algoModelInstance
+
