@@ -5,6 +5,7 @@ import logging.config
 from logs import LogHandler
 from sklearn import preprocessing
 from config import ConfigManager
+from DatasetConnector import DatasetConnectorFactory as DCF
 
 ErrorLogger = logging.getLogger("ErrorLogs")
 DebugLogger = logging.getLogger("DebugLogs")
@@ -35,7 +36,7 @@ class DataPreProcessor(object):
             # Drop duplicate rows from dataset
             dataset = dataset.drop_duplicates()
 
-            # Handle Missing(NAN) values
+            # Handle Missing values
             dataset = self.handle_missing_values(model_dict, dataset)
 
             # Handle Categorical(string) data by converting to int
@@ -163,3 +164,34 @@ class DataPreProcessor(object):
             target_name = target["columnName"]
             target_list.append(target_name)
         return target_list
+
+    def best_feature_selection(self, model_dict):
+        # Fetch Dataset
+        dataset = DCF.DatasetConnectorFactory().dataset(model_dict["dbconnect"])
+
+        # replace ? with NAN for handling later
+        dataset = dataset.replace('?', np.NaN)
+        dataset = dataset.replace(' ?', np.NaN)
+
+        # Drop duplicate rows from dataset
+        dataset = dataset.drop_duplicates()
+
+        # Handle Missing values
+        dataset = dataset.dropna()
+
+        from sklearn.ensemble import ExtraTreesClassifier
+        X = dataset[model_dict["featureList"]]
+        Y = dataset[model_dict["targetList"]]
+
+        # feature extraction
+        model = ExtraTreesClassifier()
+        model.fit(X, Y)
+        listScore = model.feature_importances_
+        featureScore = dict()
+        for i in range(len(model_dict["featureList"])):
+            print(model_dict["featureList"][i])
+        for g in listScore:
+            print(g)
+        for i in range(len(model_dict["featureList"])):
+            featureScore[model_dict["featureList"][i]]= listScore[i]
+        return featureScore

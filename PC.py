@@ -1,4 +1,4 @@
-from flask import request, abort, Flask, jsonify, make_response, Response
+from flask import request, abort, Flask, jsonify, make_response
 from data import ModelProcessor as mp
 from config import ConfigManager
 from DatasetConnector import DatasetConnectorFactory as dcf
@@ -8,6 +8,7 @@ from threading import Thread
 import logging.config
 from logs import LogHandler
 from handler import LoadModelService as LMS
+from data import DataPreProcessor as DPP
 
 ErrorLogger = logging.getLogger("ErrorLogs")
 InfoLogger = logging.getLogger("InfoLogs")
@@ -28,6 +29,33 @@ def check_dataset_connection():
 
     try:
             response_json["success"] = dcf.DatasetConnectorFactory().check_connection(json_data["dbconnect"])
+
+    except Exception as e:
+        ErrorLogger.exception('EXCEPTION %s: Damm! Something Blew up', 500)
+        response_json["success"] = False
+        response_json["message"] = "EXCEPTION 500: Damm! Something Blew up"
+        response_code = 500
+
+    return jsonify(response_json), response_code
+
+
+@app.route('/todo/api/v1.0/PredictionAnalytics/BestFeatureSelection', methods=['POST'])
+def best_feature_selection():
+
+    if not request.json:
+        abort(ConfigManager.error_code_400)
+
+    json_data = request.json
+    response_json = dict()
+    response_code = 200
+
+    try:
+        if not dcf.DatasetConnectorFactory().check_connection(json_data["dbconnect"]):
+            raise CE.DatasetConnectionFailed("Failed to establish connection with dataset connector: %s"
+                                             % (json_data["dbconnect"]["name"]), 403)
+
+        response_json["bestFeaturesScore"] = DPP.DataPreProcessor().best_feature_selection(json_data)
+        response_json["success"] = True
 
     except Exception as e:
         ErrorLogger.exception('EXCEPTION %s: Damm! Something Blew up', 500)
@@ -320,6 +348,53 @@ def predict():
             raise CE.ModelNotInMemory("Model not deployed, Please deploy model", 403)
 
         response_json["prediction"] = str(PR.PredictService().predict_service(json_data))
+
+    except CE.ModelDoesNotExist as e:
+        ErrorLogger.exception('EXCEPTION %s: NO such model "%s"', str(e.errors), str(e))
+        response_json["success"] = False
+        response_json["message"] = str(e)
+        response_code = int(e.errors)
+
+    except CE.ModelNotInMemory as e:
+        ErrorLogger.exception('EXCEPTION %s: NO such model "%s"', str(e.errors), str(e))
+        response_json["success"] = False
+        response_json["message"] = str(e)
+        response_code = int(e.errors)
+
+    except CE.InvalidPredictionParams as e:
+        ErrorLogger.exception('EXCEPTION %s:Invalid Prediction Params "%s"', str(e.errors), str(e))
+        response_json["success"] = False
+        response_json["message"] = str(e)
+        response_code = int(e.errors)
+
+    except Exception as e:
+        ErrorLogger.exception('EXCEPTION %s: Damm! Something Blew up', 500)
+        response_json["success"] = False
+        response_json["message"] = "EXCEPTION 500: Damm! Something Blew up"
+        response_code = 500
+
+    return jsonify(response_json), response_code
+
+
+@app.route('/todo/api/v1.0/PredictionAnalytics/BatchPredict', methods=['POST'])
+def batchPredict():
+
+    if not request.json:
+        abort(ConfigManager.error_code_400)
+
+    json_data = request.json
+    response_json = dict()
+    response_json["success"] = True
+    response_code = 200
+
+    try:
+        if mp.ModelProcessor().get_model_mongo_byAppIdandmodelName_count(json_data) == 0:
+            raise CE.ModelDoesNotExist("Model name does not exist", 403)
+
+        elif not LMS.LoadModelService().check_if_model_load(json_data):
+            raise CE.ModelNotInMemory("Model not deployed, Please deploy model", 403)
+
+        response_json["prediction"] = str(PR.PredictService().predict_batch_service(json_data))
 
     except CE.ModelDoesNotExist as e:
         ErrorLogger.exception('EXCEPTION %s: NO such model "%s"', str(e.errors), str(e))
